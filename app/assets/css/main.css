@@ -1,0 +1,1538 @@
+/* dark blue: #090f1f */
+/* blue: #090f1f */
+/* neutral gray: #808080 */
+/* light gray: #f2f2f2 */
+/* green: #20d370 */
+/* dark grey: #1a1a1a */
+
+@font-face {
+	font-family: 'etter-book';
+	src: url('EtterCI-Book.eot');
+	src: url('EtterCI-Book.eot') format('embedded-opentype'),
+		 url('EtterCI-Book.woff') format('woff'),
+		 url('EtterCI-Book.ttf') format('truetype'),
+		 url('EtterCI-Book.svg#CircularStdBookRegular') format('svg');
+}
+
+@font-face {
+	font-family: 'etter-medium';
+	src: url('EtterCI-Medium.eot');
+	src: url('EtterCI-Medium.eot') format('embedded-opentype'),
+		url('EtterCI-Medium.woff') format('woff'),
+		url('EtterCI-Medium.ttf') format('truetype'),
+		url('EtterCI-Medium.svg#CircularStdMediumRegular') format('svg');
+}
+
+html, body {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	color: #ff0000;
+	padding: 0;
+	margin: 0;
+	font-family: 'etter-book', sans-serif;
+	background-color: #0d0d0d;
+	font-smoothing: antialiased;
+}
+
+.link {
+	cursor: pointer;
+}
+
+*:focus {
+	outline: none;
+}
+
+.screen header {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index:100;
+}
+
+.blocker {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 1;
+}
+
+.paddingWrapper {
+	padding: 2em;
+}
+
+.btn.cancel, .btn.notebook, .toggleMenu {
+	border: none;
+	position: absolute;
+	line-height: 1em;
+	cursor: pointer;
+	z-index: 3;
+	color : #fff;
+	top: 0.5em;
+}
+
+.btn.notebook {
+	right: 0.5em;
+	display: none;
+}
+
+.btn.toggleMenu {
+	right: 1em;
+	top: 0.5em;
+}
+
+.btn.cancel {
+	left: 0.5em;
+}
+
+.challengeView .btn.cancel {
+	left: 1em;
+}
+
+/* close X */
+.btn i.fa {
+	font-size: 1.5em;
+	padding : 0.25em;
+	color: #fff;
+}
+
+.childViews {
+	position: absolute;
+	max-height: 100vh;
+	top: 4em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	z-index: 1;
+	box-sizing: border-box;
+}
+
+.scroll {
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.noscroll {
+	overflow: visible;
+}
+
+.puzzleStart {
+
+	position: fixed;
+}
+.gamePlayContent {
+	position: absolute;
+	top:4em;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.puzzleEnd {
+	text-align: center;
+	padding-bottom: 2em;
+	background-color:#1a1a1a;
+	color: #f2f2f2;
+}
+
+.puzzleEnd h2 {
+	font-size: 3em;
+	padding: 0.25em;
+	margin: 0.25em;
+	padding-bottom: 0em;
+	vertical-align: top;
+}
+
+.puzzleEnd h2 span {
+	font-size: 1.5em;
+}
+
+.puzzleEnd h3 {
+	font-size: 1.5em;
+	display: none;
+}
+
+.puzzleEnd h3.show {
+	display: block;
+}
+
+.puzzleList
+{
+	position: absolute;
+	top: 2.5em;
+	bottom: 0;
+	width: 100%;
+}
+
+.avatar {
+	display: inline-block;
+	height: 2.5em;
+	width: 2.5em;
+	clip-path: circle(50% at center);
+	-webkit-clip-path: circle(50% at center);
+	margin-right: 0.5em;
+}
+
+.avatar img {
+	width: 100%;
+	height: 100%
+}
+
+/*FONTS*/
+
+.txtLarge {
+	font-size: 5em;
+	letter-spacing:-0.25px;
+}
+
+.txtTitle {
+	font-size: 1.5em;
+	letter-spacing:-0.25px;
+	padding-bottom:1.5em;
+}
+
+.txtMedium {
+	font-size: 1.25em;
+	letter-spacing:0px;
+}
+
+.txtSmall {
+	font-size: 1em;
+	letter-spacing:0px;
+}
+
+.txtDark {
+	color:#000;
+}
+
+.txtGrey {
+	color:#808080;
+}
+
+.txtBlue {
+	color:#091eff;
+}
+
+.txtBright {
+	color:#fff;
+}
+
+.centerX {
+	text-align: center;
+	width: 100%;
+}
+
+.centerY {
+	position: absolute; 
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.txtPadding {
+	padding: 2em; 
+}
+
+input {
+	font-size: 1.25em;
+	padding: 0.5em 0em 0.5em 0.5em;
+	color: #091eff;
+	width:80%;
+}
+
+.puzzleEnd .button, .screen.sendPuzzleView .send {
+	color: white;
+	padding : 1em;
+	display: inline-block;
+	font-size: 1.25em;
+}
+
+.level2 {
+	z-index: 20;
+}
+
+.level2.profileView, .level2.howtoView {
+	background-color: #1a1a1a;
+}
+.screen.lobby {
+	min-height: 100vh;
+	background-color: #fff;
+	background-color: #0d0d0d;
+}
+
+.puzzleButton {
+	display: inline-block;
+	width: 6em;
+	height: 6em;
+	margin: 0.5em;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+
+.puzzleButton span {
+	line-height: 2em;
+	font-size: 2em;
+}
+
+.puzzleContent {
+	position: relative;
+	padding-bottom: 0.5em;
+}
+
+.bySender {
+	position: absolute;
+	left: 0.5em;
+	bottom: -1em;
+	right: 0.5em;
+	font-size: 0.75em;
+}
+
+.puzzleButton.disabled {
+	opacity: 0.4;
+	cursor: default;
+	background-color: #333;
+	color: #ccc;
+}
+
+.newPuzzleButtons {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	z-index:200;
+	text-align: right;
+}
+
+.newPuzzleButtons div {
+	transition: 0.6s;
+	font-family: 'etter-book', sans-serif;
+	background-color: #fff;
+	border-radius: 0;
+	padding: 1em;
+	border: solid 3px #091eff;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.newPuzzleButtons div:hover {
+	color: #000;
+	border: solid 3px #000;
+}
+
+.newPuzzleButtons .newStressPuzzle {
+	border-color: #81307E;
+	color: #81307E;
+}
+
+#button_send {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-family: 'etter-book', sans-serif;
+	border: solid 3px #091eff;
+	transition: 0.6s;
+	cursor: pointer;
+	background-color: #fff;
+	position: absolute;
+	top: 1em;
+	padding: 0.5em;
+	text-align: center;
+	right: 1em;
+}
+
+#button_send:hover  {
+	border: 3px solid #000;
+	color: #000;
+}
+
+.progressBar {
+	margin: 0;
+	background-color: #323232;
+	position: absolute;
+	top: 0;
+	height: 4em;
+	z-index: -1;
+}
+
+.timerBar {
+	display: block;
+	height: 0.25em;
+	background-color: #1a1a1a;
+}
+
+.senderSymbolView {
+	position: relative;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.senderSymbolViewScroll {
+    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.senderSymbolView.disabled {
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+.receiverColorView {
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+}
+
+.receiverSymbolView {
+	margin: 2em;
+	min-height: calc(50% - 8em);
+}
+
+.senderColorView {
+	width: 100%;
+	height: calc(50% - 2em);
+}
+
+.senderColor, .receiverColor {	
+	width: calc(50% - 1em);
+	height: calc(50% - 1em);
+	margin-top:0.5em;
+	margin-left:0.5em;
+	float:left;
+	position: relative;
+}
+
+.senderColor svg, .receiverColor svg {
+	width: 100%;
+	height: 100%;
+}
+
+.senderColor.selected:after {
+	content: ' ';
+	position: absolute;
+	left: calc(50% - 1em);
+    top: calc(50% - 1em);
+	width:2em;
+	height:2em;
+	background-color: #808080;
+	border-radius: 1em;
+}
+
+.receiverColor.selected:after {
+	content: ' ';
+	position: absolute;
+	left: calc(50% - 1em);
+    top: calc(50% - 1em);
+	width:2em;
+	height:2em;
+	background-color: #808080;
+	border-radius: 1em;
+}
+
+.senderSymbol, .receiverSymbol {
+	width: 5em;
+	height: 5em;
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.receiverSymbol {
+	background: none;
+	border: none; 
+}
+
+.senderSymbol {
+	border-bottom: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	text-align: center;
+}
+
+.senderSymbol img,
+.receiverSymbol img {
+	width: 80%;
+	height: 80%;
+	padding-top: 10%;
+}
+
+.receiverSymbol {
+	margin: 0.25em 0.25em 0 0;
+	width: 4em;
+	height: 4em;
+}
+
+.receiverColor, .senderSymbol {
+	cursor: pointer;
+}
+
+#selectedSymbols {
+	box-shadow: 0px 0px 24px 0px #7f7f7f;
+	width:100%;
+	position: relative;
+	z-index:15;
+	background-color:#fff;
+	min-height: 6em;
+	flex-shrink: 0;
+}
+
+#selectedSymbols .senderSymbol {
+	background-color: #fff;
+	border: none;
+}
+
+.stressMode .confirmTrial {
+	display: none !important;
+}
+
+.button_frame {
+	padding:8px 10px;
+	margin:0px 4px 8px 0px;
+	border: 3px solid #091eff;
+	font-family: 'etter-medium', sans-serif;
+	font-size:1.25em;
+	background:none;
+	cursor: pointer;
+	transition: 0.6s;
+	display: inline-block;
+	color:#091eff;
+}
+
+.button_frame:hover  {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+.button_blue {
+	padding:16px 20px;
+	margin:12px 0px 0px 0px;
+	background-color:#091eff;
+	border: 3px solid #091eff;
+	cursor: pointer;
+	cursor: hand;
+	transition: 0.3s;
+	font-size:1em;
+	font-family:etter-medium;
+	display: inline-block;
+	color:#fff;
+}
+
+.button_blue:hover  {
+	color: #090f1f;
+}
+
+.button_white {
+	padding:16px 20px;
+	margin:12px 0px 0px 0px;
+	background-color:#fff;
+	cursor: pointer;
+	cursor: hand;
+	transition: 0.6s;
+	font-size:1em;
+	font-family:etter-medium;
+	display: inline-block;
+	color:#091eff;
+}
+
+.button_white:hover  {
+	background-color:#091eff;
+	color: #fff;
+}
+
+.button_frame_white {
+	padding:8px 10px;
+	margin:0px 4px 8px 0px;
+	border: 3px solid #fff;
+	font-family: 'etter-medium', sans-serif;
+	font-size:1em;
+	background:none;
+	cursor: pointer;
+	transition: 0.6s;
+	display: inline-block;
+	color:#fff;
+}
+
+.button_frame_white:hover  {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+/* input bar */
+.chooseDescText {
+	/*padding:1em;*/
+	display: block;
+	line-height: 4em;
+}
+.challengeText
+{
+	padding-bottom:2em;
+}
+.tabBar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #333;
+}
+
+.loginForm label {
+	font-size: 0.75em;
+	color: #888;
+}
+
+.loginForm input.error {
+	border: 3px solid #ff0000;
+}
+
+.userPoints {
+	display : none;
+	font-size: 1em;
+	text-align: center;
+	position: absolute;
+	z-index: 2;
+	right: 1.25em;
+	color: #ccc;
+	top: 2.5em;
+}
+
+.prompt {
+	position: absolute;
+	z-index: 250;
+	background: #091eff;
+	padding: 1em 1em 1em 2em;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.fullScreen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: scroll;
+	height: 100%;
+}
+
+.prompt .message {
+	margin-top: 1.0em;
+	margin-bottom: 1.0em;
+}
+
+.prompt .symbols img {
+    background-color: white;
+    width: 55px;
+}
+
+.closeLess.prompt .message {
+	margin-top: 0em;	
+}
+
+.toggleMenu .btn i {
+	font-size: 2.5em;
+}
+
+.lobbyHeader {
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	width:100%;
+	font-weight: bold;
+}
+
+.cancel .menuClose {
+	position:fixed; 
+	right:0px; 
+	top:0px; 
+	width:4em; 
+	height:4em; 
+	cursor:pointer;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	right: 0;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	top: 4em;
+	z-index: 100;
+}
+
+.greyout {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top:0;
+	bottom:0;
+	background: rgba(0,0,0,0.85);
+	z-index: -100;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.menu li {
+	text-align:right;
+	margin: 0;
+	padding: 1em 2em;
+	line-height: 2em;
+	border-bottom: solid 1px #1c91e5;
+	background-color: #1fa3ff;
+	transition: 0.6s;
+	color: #000;
+}
+
+.menu li:hover {
+	background: #fff;
+}
+
+ul.childView {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.childView li {
+	display: block;
+	padding: 1.25em;
+	border-bottom: solid 1px #1a1a1a;
+	background: #0d0d0d;
+}
+
+.rank.myLine {
+	background-color: #091eff;
+	color: #fff;
+}
+
+.rank .rankNumber {
+	display: inline-block;
+	width: 2em;
+}
+
+.rank .totalPoints,
+.profile span {
+	float: right;
+}
+
+.profile .rankIcon {
+	width: 8em;
+}
+
+.profile input {
+	width:inherit;
+}
+
+.childView li.symbol {
+	padding: 0.125em;
+	position: relative;
+}
+
+.childView li.symbol:after {
+	display: block;
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 2.5em;
+	background: #e5e5e5;
+	z-index: 1;
+}
+
+.symbol img {
+	width: 2em;
+	height: 2em;
+	position: relative;
+	z-index: 2;
+}
+
+.childView li.title {
+	background: #1a1a1a;
+	color: #fff;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+
+/** helper classes */
+
+.hidden {
+	display: none !important;
+}
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+.output {
+	width: calc(100% - 8em);
+	padding: 1em;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.friend .offline, .friend .btn i.undefined {
+	color : #fff;
+}
+
+.friend .online {
+	color : #20d370;
+}
+
+.friend .idle {
+	color : #808080;
+}
+
+.friend .playing {
+	color : #091eff;
+}
+
+.noteBookView .symbol img {
+	padding: 1em;
+	background-color: #e5e5e5;
+}
+
+.noteBookView li {
+	background-color: #e5e5e5;
+}
+
+.noteBookView .symbol input {
+	font-size: 1.25em;
+	padding: 0.5em;
+	width: calc(100% - 8em);
+	margin-top: 0.25em;
+	margin-left: 0.75em;
+	vertical-align: top;
+	user-select: auto;
+}
+
+.noteBookView {
+	max-height: calc(100vh - 4em);
+}
+
+.challengeView {
+	padding: 2em;
+	padding-top: 4em;
+	text-align: center
+}
+
+.challengeView .btn.challenge, .btn.accept, .btn.finish {
+	background : black;
+	color: white;
+	padding : 1em;
+	font-size: 1.5em;
+	margin-top : 1em;
+}
+
+.challengeView .waitingForJoin {
+	display: none;
+	margin : 3em 0;
+}
+
+.topBar {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4em;
+	background-color: #000;
+	transition: left 0.5s ease-out;
+	position: relative;
+	z-index: 100;
+}
+
+.topBarHeight {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.topBar.subView .rank {
+	display: none;
+}
+
+.upper {
+	position: fixed;
+	z-index:20;
+	height: calc(100% - 4em);
+	width:100%;
+	background-color: #fff;
+}
+
+.lower {
+	position: fixed;
+	z-index:30;
+	height: 50%;
+	top: 50%;
+	width:100%;
+	background-color: #808080;
+}
+
+.trialView.sender .upper, .sender .trialView .upper {
+	background: #808080;
+}
+
+.trialView.sender .lower, .sender .trialView .lower {
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.tutorial .sender .lower {
+	background: #fff;
+}
+
+.lightbox {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right : 0px;
+	bottom : 0px;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 100;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+
+select.languageSelect {
+	color: white;
+	font-size: 1.5em;
+	border: 1px solid gray;
+	background: none;
+	text-align: center;
+}
+
+.onboarding {
+	-webkit-overflow-scrolling: touch;
+}
+
+.onboarding .errorMsg {
+	color: red;
+	display: none;
+}
+
+.onboarding .step {
+	display: none;
+}
+
+.gray {
+	color: #808080;
+}
+
+
+.gamePlay .livechat {
+	position: absolute;
+	list-style: none;
+	top: 0;
+	right: 0;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.gamePlay .livechat li {
+	background-color: #2C2C2C;
+	width: 4.5em;
+	height: 4em;
+	line-height: 4em;
+	text-align: center;
+	display: inline-block;
+}
+
+.chatflash {
+	animation: 2.5s ease-in-out chatflash;
+}
+
+@keyframes chatflash {
+	0%   { background-color: #2C2C2C; }
+	10%  { background-color: #00ffff; }
+	50%  { background-color: #00ffff; }
+	100% { background-color: #2C2C2C; }
+}
+
+.sendPuzzleView {
+	z-index: 999;
+	text-align: center;
+}
+
+.sendPuzzleView .send.hidden {
+	display: none;
+}
+
+.sendPuzzleView .friendsList {
+	overflow-y: auto;
+}
+
+.sendPuzzleView .friendsList li {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.sendPuzzleView .friend.selected {
+	color: #20d370;
+}
+
+header {
+	height: 4em;
+}
+
+.ColorsAppFriendsList {
+	position: absolute;
+	left: 0vw;
+	background: #0d0d0d;
+	z-index: 1;
+	height: 100vh;
+	width: 80vw;
+	max-height : 100vh;
+	overflow-y: auto;
+}
+
+#ColorsApp.menuMode {
+	top : 25em;
+	z-index: 2;
+}
+
+.topBar .rank img {
+	width: 3em;
+	padding-left: 0.5em;
+}
+
+.countdown {
+	text-align: center;
+}
+
+.countdown .counter {
+	padding-bottom: 0.5em;
+}
+
+
+/*adapt to screen sizes*/
+
+@media screen and (max-width: 321px) {
+	#ColorsApp {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 541px) {
+	#ColorsApp {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#ColorsApp {
+		font-size: 24px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#ColorsApp {
+		font-size: 32px;
+	}
+}
+
+/*puzzle list*/
+
+.leftColumn {
+	width: 3.5em;
+	margin-right: 22px;
+	text-align: center;
+	line-height: 2em;
+}
+
+
+.middleColumn {
+	flex-grow:1;
+}
+
+.puzzlesView{
+	background: #eee;
+	height:100%;
+}
+
+.PuzzlesHeader {
+	text-align: left;
+	background: #323232;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+	height:2.5em;
+	line-height: 2.5em;
+	display: flex;
+	position: fixed;
+	top:4em;
+	right:0;
+	left:0;
+	z-index: 200;
+}
+
+.PuzzlesHeader .puzzles,
+.PuzzlesHeader .senderName,
+.PuzzlesHeader .status {
+	color: #808080;
+	line-height: 2.5em;
+}
+
+.senderName {
+	line-height: 2em;
+	padding-right: 0.25em;
+}
+
+.SenderRow {
+	background-color: #ffffff;	
+	border-bottom: 1px solid #e5e5e5;
+	padding-left: 0em;
+	padding-right:0em;
+	padding-top:1.5em;
+	padding-bottom:1.5em;
+	display: flex;
+	vertical-align: middle;
+}
+
+.SenderRow .senderPuzzleCount img,
+.SenderRow .senderRank img,
+.status img {
+	height: 2.5em;
+	vertical-align: middle;
+	padding-right: 1em;
+}
+
+.status {
+	position: relative;
+	height: 2.5em;
+}
+
+.stress .status:after {
+	content: "\f017";
+	font-family: "FontAwesome";
+	position: absolute;
+	top: calc(50% - 0.5em);
+	left: calc(50% - 0.78em);
+	font-size: 1.5em;
+	color: white;
+	pointer-events: none;
+}
+
+.SenderRow .senderPuzzleCount.invitationCount:before {
+	content: ' ';
+	position: absolute;
+	background-color: #ffce27;
+	border-radius: 1em;
+	width: 2em;
+	height: 2em;
+	left: -50px;
+	top: -51px; /* -51px on purpose to center align with text. */
+	right: -50px;
+	bottom: -50px;
+	margin: auto;
+}
+
+.SenderRow .senderPuzzleCount,
+.SenderRow .senderPuzzleCount div {
+	position: relative;
+}
+
+.SenderRow.nopuzzles {
+	background: #f5f5f5;
+}
+
+.noInternetBanner, .errorBanner {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 300;
+	background-color: #091eff;
+}
+
+.profileView select {
+	color: white;
+	border: 1px white;
+	background: none;
+	text-align: right;
+}
+
+
+
+/* TUTORIAL */
+
+.tutorialOverlay {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 1000;
+	border-color: rgba(0, 0, 0, 0.45);
+	border-style: solid;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tutorialOverlay.hidden {
+	display: block !important;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.tutorialClose {
+	position: absolute;
+	top: 0; right: 0;
+	width: 2em; height: 2em;
+	background-image: url(../img/icon-close-white.png);
+	background-size: 2em;
+}
+
+.tutorialMessage {
+	box-sizing: border-box;
+	position: absolute;
+	left: 0; right: 0;
+	z-index: 1002;
+	width: 100%;
+	padding: 2em;
+	background-color: #091eff;
+	transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+.tutorialMessage.hidden {
+	display: block !important;
+	visibility: hidden;
+	opacity: 0;
+	transform: translate(0, -20px);
+}
+
+.tutorialMessage.hidden.pointerBottom {
+	transform: translate(0, 20px);
+}
+
+.tutorialMessage .pointer {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(9, 30, 255, 0);
+	border-bottom-color: #091eff;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+.tutorialMessage .pointer.bottom {
+	bottom: unset;
+	top: 100%;
+	border-bottom: 0;
+	border-top-color: #091eff;
+}
+
+.tutorial .timerBar {
+	display: none;
+}
+
+
+
+/* PSEUDO GENERATOR */
+
+.choosepseudo {
+	box-sizing: border-box;
+}
+
+.choosepseudo .pseudo {
+	border: 2px solid white;
+	padding: 15px 10px;
+	margin-bottom: 1.5em;
+}
+
+.choosepseudo .pseudo .name {
+	display: inline-block;
+	padding: 0;
+	margin: 0 0.2em;
+	transition: filter 0.1s;
+}
+
+.choosepseudo .shuffle, .choosepseudo .ok {
+	margin-bottom: 3em;
+}
+
+
+
+/* SPINNER */
+
+.preloader {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+}
+
+#spinner {
+	position: relative;
+	height:34px;
+	width:34px;
+	top: 50%;
+	margin: -20px auto;
+	border: 3px solid rgba(255, 255, 255, 0);
+	border-radius: 100%;
+	animation: rotation .4s infinite linear;
+}
+
+#spinner2 {
+	position: relative;
+	height:34px;
+	width:34px;
+	top: 50%;
+	margin: -20px auto;
+	border: 3px solid rgba(255, 255, 255, 0);
+	border-radius: 100%;
+	animation: rotation .6s infinite linear;
+}
+
+#spinner:before {
+	content:"";
+	display:block;
+	position:absolute;
+	left:-3px;
+	top:-3px;
+	height:100%;
+	width:100%;
+	border-top:3px solid rgba(0,0,0,1);
+	border-left:3px solid transparent;
+	border-bottom:3px solid transparent;
+	border-right:3px solid transparent;
+	border-radius:100%;
+	border-top-color: #091eff;
+}
+
+#spinner2:before {
+	content:"";
+	display:block;
+	position:absolute;
+	left:-3px;
+	top:-3px;
+	height:100%;
+	width:100%;
+	border-top:3px solid rgba(0,0,0,1);
+	border-left:3px solid transparent;
+	border-bottom:3px solid transparent;
+	border-right:3px solid transparent;
+	border-radius:100%;
+	border-top-color: #091eff;
+}
+
+@keyframes rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+
+
+/* animations */
+
+.fadeIn {
+	opacity: 0;
+	animation: fadein .5s forwards;
+ }
+ 
+ @keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+.fadeOut {
+	opacity: 1;
+	animation: fadeout .5s forwards;
+ }
+ 
+ @keyframes fadeout {
+	from { opacity: 1; }
+	to   { opacity: 0; }
+}
+
+.slideDown {
+	animation-name: slidedown;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.backwards {
+	animation-direction: alternate !important;
+}
+
+.slideDown.prompt {
+	animation-duration: 5s;
+	animation-name: slidedownandup;
+
+}
+
+@keyframes slidedown {
+	0% {
+		transform: translateY(-100%);
+	}
+	15% {
+		transform: translateY(0);
+	}
+	88% {
+		transform: translateY(0);
+	}
+	100% {
+		/*transform: translateY(-100%);*/
+	}
+}
+@keyframes slidedownandup {
+	0% {
+		transform: translateY(-100%);
+	}
+	10% {
+		transform: translateY(0);
+	}
+	85% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+.slideUp {
+	animation-name: slideup;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	transform: translateY(100%);
+}
+
+@keyframes slideup {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.slideIn {
+	animation-name: slidein;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+	0% {
+		transform: translateY(-4em);
+	}
+	50% {
+		transform: translateY(-4em);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.go1 {
+	animation-delay: 0s;
+}
+.go2 {
+	animation-delay: 0.2s;
+}
+.go3 {
+	animation-delay: 0.4s;
+}
+.go4 {
+	animation-delay: 0.6s;
+}
+.go5 {
+	animation-delay: 0.8s;
+}
+.go6 {
+	animation-delay: 1.0s;
+}
+.go7 {
+	animation-delay: 1.2s;
+}
+
+.toggleMenu .menuOpen, .toggleMenu .menuClose {
+	width: 3em;
+	height: 3em;
+	background-size: 3em;
+}
+
+.toggleMenu .menuOpen {
+	background-image: url(../img/icon-hamburger.png);
+}
+
+.toggleMenu .menuClose {
+	background-image: url(../img/icon-close-white.png);
+}
+
+.blinking:after, .blinking:before {
+	animation-name: blinko;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes blinko {
+    0% {
+       opacity:1;
+    }
+    20% {
+       opacity:1;
+    }
+    50% {
+       opacity:0;
+    }
+    80% {
+        opacity:1;
+    }
+    100% {
+        opacity:1;
+    }
+}

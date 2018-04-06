@@ -1,0 +1,90 @@
+{
+    "tutorial_receiver": [
+        {
+            "delay": 2.5,
+            "selector": ".receiverSymbolView",
+            "phrase": "tutorial_bubble_sender_icon"
+        },
+        {
+            "selector": ".receiverColorView",
+            "phrase": "tutorial_bubble_sender_splash"
+        }
+    ],
+
+    "tutorial_sender": [
+        {
+            "delay": 2.5,
+            "selector": ".selected",
+            "phrase": "tutorial_bubble_receiver_splash"
+        },
+        {
+            "selector": ".senderColorView",
+            "phrase": "tutorial_bubble_receiver_colors"
+        },
+        {
+            "selector": ".senderSymbolView",
+            "phrase": "tutorial_bubble_receiver_icon"
+        }
+    ],
+
+    "tutorial_sender_first_symbol": [
+        {
+            "delay": 1.0,
+            "selector": ".senderSymbol",
+            "phrase": "tutorial_bubble_delete"
+        },
+        {
+            "selector": ".confirmTrial",
+            "phrase": "tutorial_bubble_send"
+        }
+    ],
+
+    "lobby": [
+        {
+            "delay": 7.0,
+            "selector": ".rank",
+            "phrase": "tutorial_bubble_rank",
+            "holePadding": 0
+        },
+        {
+            "selector": ".lobbyHeader",
+            "phrase": "tutorial_bubble_score"
+        },
+        {
+            "selector": ".senderPuzzleCount",
+            "phrase": "tutorial_bubble_puzzles"
+        },
+        {
+            "selector": ".newPuzzle",
+            "phrase": "tutorial_bubble_new"
+        }
+    ],
+
+    "lobby_online": [
+        {
+            "delay": 1.0,
+            "selector": ".status .online:visible, .status .playing:visible",
+            "phrase": "tutorial_bubble_status"
+        }
+    ],
+
+    "lobby_stress": [
+        {
+            "delay": 1.0,
+            "selector": ".newStressPuzzle",
+            "phrase": "tutorial_bubble_stress"
+        }
+    ],
+
+    "live_chat_icons_dummy": [
+    ],
+
+    "live_chat_icons": [
+        {
+            "delay": 1.0,
+            "selector": ".livechat",
+            "phrase": "tutorial_bubble_chat"
+        }
+    ]
+
+}
