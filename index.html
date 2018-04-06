@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
+		<meta http-equiv="Cache-control" content="No-Cache">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<title>Color Game</title>
+		<link rel="stylesheet" type="text/css" href="app/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="app/assets/css/font-awesome.min.css">
+	</head>
+	<body>
+	
+		<div class="noInternetBanner slideUp go0">
+			<div class="centerX centerY">
+				<div class="txtBright txtTitle fadeIn go2">:-(</div>
+				<div class="txtBright txtMedium fadeIn go4 message"></div>
+			</div>
+		</div>
+		<div class="errorBanner slideUp go0">
+			<div class="centerX centerY">
+				<div class="txtBright txtTitle fadeIn go2">:-(</div>
+				<div class="txtBright txtMedium fadeIn go4 message"></div>
+			</div>
+		</div>
+		
+		<div id="loadCircle" class="hidden">
+			<div class="preloader" type="text/html">
+				<div id="spinner"></div>
+			</div>
+			<div class="preloader" type="text/html">
+				<div id="spinner2"></div>
+			</div>
+		</div>
+		
+		<div id="ColorsApp"></div>
+		
+		<div id="ColorsTemplates"></div>
+
+		<script type='application/javascript' src='app/vendor/prefixfree.min.js'></script>		
+		<script type='application/javascript' src='app/vendor/fastclick.js'></script>
+		<script type='application/javascript' src='app/vendor/spin.js'></script>
+		<script async data-main="app/colorgame.v1-3" src="app/vendor/require.colorgame.js" type="text/javascript"></script>
+
+	</body>
+</html>
+   
